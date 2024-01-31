@@ -41,6 +41,7 @@ require("lazy").setup({
         require("floataqq.plugins.startup")
     end
 },
+{'ThePrimeagen/vim-be-good'},
 -- LSP
 {
     'VonHeikemen/lsp-zero.nvim',
@@ -65,9 +66,19 @@ require("lazy").setup({
 {
     "williamboman/mason.nvim",
     lazy = false,
+    ensure_installed = {
+        "black"
+    },
     config = function()
         require("mason").setup()
     end
 },
-{'williamboman/mason-lspconfig.nvim'}
+{'williamboman/mason-lspconfig.nvim'},
+-- Formatting and stuff
+{
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+        require("floataqq.plugins.null_ls")
+    end
+},
 })
