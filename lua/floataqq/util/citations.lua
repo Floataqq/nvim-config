@@ -1,5 +1,9 @@
 local citations = {
-'', ''}
+    'I use arch btw',
+    'unzip; strip; touch; finger; mount; fsck; more; yes; unmount; sleep',
+    'This config is bloat.',
+
+}
 
 local function get()
     return citations[math.random(1, #citations)]
