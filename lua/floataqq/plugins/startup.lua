@@ -1,12 +1,12 @@
 local splashes = require("floataqq.util.splashes")
 local function get_splash()
     local w = vim.api.nvim_win_get_width(0)
-    if w > #splashes.doom[1] + 4 then
+    if w > #splashes.doom[1] + 10 then
         return splashes.doom
-    elseif w > 40 then 
+    elseif w > #splashes.goose[1] + 10 then
         return splashes.goose
-    else 
-        return {}
+    elseif w > #splashes.uwu[1] + 10 then
+        return splashes.uwu
     end
 end
 
@@ -33,11 +33,11 @@ require("startup").setup({
         title = "Basic Commands",
         margin = 5,
         content = {
-            { "File Search", "Telescope find_files", "f" },
-            { "Live grep", "Telescope live_grep", "g" },
-            { "Open git repo here", "Telescope git_files", "p" },
-            { "Configure", ":Ex ~/.config/nvim", "c" },
-            { "Quit", "q!", "q"}
+            { "File Search",        "Telescope find_files", "f" },
+            { "Live grep",          "Telescope live_grep",  "g" },
+            { "Open git repo here", "Telescope git_files",  "p" },
+            { "Configure",          ":Ex ~/.config/nvim",   "c" },
+            { "Quit",               "q!",                   "q" },
         },
         highlight = "String",
         default_color = "",
