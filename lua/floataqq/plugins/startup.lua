@@ -35,8 +35,6 @@ require("startup").setup({
         content = {
             { "File Search", "Telescope find_files", "f" },
             { "Live grep", "Telescope live_grep", "g" },
-            { "New File", "lua require'startup'.new_file()", "n" },
-            { "Colorschemes", "Telescope colorschemes", "s" },
             { "Open git repo here", "Telescope git_files", "p" },
             { "Configure", ":Ex ~/.config/nvim", "c" },
             { "Quit", "q!", "q"}
@@ -52,7 +50,7 @@ require("startup").setup({
         fold_section = false,
         title = "Footer",
         margin = 5,
-        content = { require("floataqq.util.citations").get() },
+        content = { require("floataqq.util.quotes").get() },
         highlight = "Number",
         default_color = "",
         oldfiles_amount = 0,

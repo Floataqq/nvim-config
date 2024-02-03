@@ -41,6 +41,13 @@ require("lazy").setup({
         require("floataqq.plugins.startup")
     end
 },
+{
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require("floataqq.plugins.lualine")
+    end
+},
 {'ThePrimeagen/vim-be-good'},
 -- LSP
 {
