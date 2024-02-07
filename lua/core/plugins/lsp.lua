@@ -1,6 +1,7 @@
 local lsp_zero = require("lsp-zero")
+local user = require("user_config")
 
-lsp_zero.setup_servers({ "lua_ls", "rust_analyzer" })
+lsp_zero.setup_servers(user.lsps or { "lua_ls", "rust_analyzer" })
 
 lsp_zero.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
@@ -47,7 +48,7 @@ local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 cmp.setup({
-  sources = {
+  sources = user.cmp_sources or {
     { name = "path" },
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
