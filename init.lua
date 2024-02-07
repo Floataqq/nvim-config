@@ -11,4 +11,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("floataqq")
+require("core")
+require("user_config")

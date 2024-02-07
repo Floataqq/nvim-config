@@ -4,48 +4,48 @@ require("lazy").setup({
         tag = "0.1.5",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
-            require("floataqq.plugins.telescope")
+            require("core.plugins.telescope")
         end,
     },
     {
         "sainnhe/everforest",
         config = function()
-            --       require("floataqq.plugins.everforest")
+            --       require("core.plugins.everforest")
         end,
     },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
-            require("floataqq.plugins.treesitter")
+            require("core.plugins.treesitter")
         end,
     },
     {
         "xiyaowong/transparent.nvim",
         lazy = false,
         config = function()
-            require("floataqq.plugins.transparent")
+            require("core.plugins.transparent")
         end,
     },
     {
         "stevearc/dressing.nvim",
         opts = {},
         config = function()
-            require("floataqq.plugins.dressing")
+            require("core.plugins.dressing")
         end,
     },
     {
         "startup-nvim/startup.nvim",
         lazy = false,
         config = function()
-            require("floataqq.plugins.startup")
+            require("core.plugins.startup")
         end,
     },
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
-            require("floataqq.plugins.lualine")
+            require("core.plugins.lualine")
         end,
     },
     { "ThePrimeagen/vim-be-good" },
@@ -85,7 +85,7 @@ require("lazy").setup({
     {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
-            require("floataqq.plugins.null_ls")
+            require("core.plugins.null_ls")
         end,
     },
 })
