@@ -2,8 +2,8 @@ local splashes = require("core.util.splashes")
 local function get_splash()
   local w = vim.api.nvim_win_get_width(0)
   local s = {}
-  for _,q in pairs(splashes) do
-    if #q[1]:gsub('[\128-\191]', '') <= w - 10 then
+  for _, q in pairs(splashes) do
+    if #q[1]:gsub("[\128-\191]", "") <= w - 10 then
       table.insert(s, q)
     end
   end
